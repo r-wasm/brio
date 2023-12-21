@@ -53,7 +53,7 @@ SEXP brio_read_lines(SEXP path, SEXP n) {
   PROTECT_INDEX out_idx;
   PROTECT_WITH_INDEX(out, &out_idx);
 
-#define READ_BUF_SIZE 1024 * 1024
+#define READ_BUF_SIZE 64 * 1024
   char read_buf[READ_BUF_SIZE];
   R_xlen_t out_num = 0;
 
